@@ -1,5 +1,5 @@
 const initiateTranslationButton = document.querySelector('.translate');
-const userInput = document.querySelector('.your-input-text-here');
+const userInput = document.querySelector('.your-text-appear-here');
 const outputText = document.querySelector('.output-response-section');
 
 
@@ -27,6 +27,6 @@ function getTranslation(input) {
     .then(data => {
         console.log(data);
         let translatedText = data.contents.translated;
-        outputText.innerHTML = translatedText;
+        outputText.innerText = translatedText;
     })
 }

@@ -5,12 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern To Old English Traslator</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="container">
-        <button class="translate">Translate</button>
-        <p class="your-input-text-here"></p>
-        <div class="output-response-section"></div>
+        <img src="/images/trnslate.svg" alt="" class="translate-img">
+            <div class="input-text-bar">
+                <textarea name="" id="" class="your-text-appear-here"></textarea>
+                <button class="translate">Speak</button>
+            </div>
+            <div class="output-text-bar">
+                <textarea class="output-response-section"></textarea>
+                <label for="select-lang">Select-Language</label>
+                <select name="" id="select-lang" class="select-language">
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="korean">Korean</option>
+                </select>
+                <label for="pitch">pitch</label>
+                <input type="range" name="" id="pitch" class="set-pitch">
+                <label for="rate">Rate</label>
+                <input type="range" name="" id="rate" class="set-rate">
+                <button class="listen-voice">Listen</button>
+            </div>
     </div>
 
     <script src="/script.js"></script>
