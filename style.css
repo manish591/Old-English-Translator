@@ -10,17 +10,19 @@ body {
 
 .container {
     width: 90vw;
-    margin: 0 auto;
+    margin: 5vh auto;
     background-color: antiquewhite;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
 }
 
 .input-text-bar {
     width: 70%;
     background-color: black;
     display: flex;
+    margin-bottom: 2vh;
 }
 
 .output-text-bar {
@@ -36,9 +38,29 @@ body {
 }
 
 .translate-img {
-    width: 40%;
+    width: 30%;
+    margin: 2vh auto;
+}
+
+.output-response-section {
+    margin-bottom: 2vh;
 }
 
 .output-response-section, .set-pitch, .set-rate, .listen-voice, .select-language {
     width: 100%;
 }
+
+.output-response-section, .listen-voice, .select-language {
+    height: 6vh;
+}
+
+.select-language, .set-pitch, .set-rate {
+    margin-bottom: 2vh;
+}
+
+label {
+    font-size: .7rem;
+    color: grey;
+}
+
+
