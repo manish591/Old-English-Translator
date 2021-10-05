@@ -1,6 +1,7 @@
 const initiateTranslationButton = document.querySelector('.translate');
 const userInput = document.querySelector('.your-text-appear-here');
 const outputText = document.querySelector('.output-response-section');
+const listenToOutputBtn = document.querySelector('.listen-voice')
 
 
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
@@ -29,4 +30,19 @@ function getTranslation(input) {
         let translatedText = data.contents.translated;
         outputText.innerText = translatedText;
     })
+}
+
+listenToOutputBtn.addEventListener('click', listenOutputLoud);
+
+function listenOutputLoud() {
+  let wordsToSpeak = outputText.value;
+
+  if(wordsToSpeak === "") {
+    let utterance = new SpeechSynthesisUtterance('Please input!');
+    speechSynthesis.speak(utterance);
+    return;
+  }
+
+  let utterance = new SpeechSynthesisUtterance(wordsToSpeak);
+  speechSynthesis.speak(utterance);
 }
